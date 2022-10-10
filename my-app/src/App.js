@@ -13,6 +13,6 @@ export class App extends React.Component {
 }
 
 Welcome.defaultProps = {
-    name: "Anna"
+    name: <strong>Anna</strong>
 }
 
