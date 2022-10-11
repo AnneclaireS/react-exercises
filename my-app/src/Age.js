@@ -2,9 +2,11 @@ import React from "react";
 
 
 export class Age extends React.Component {
-    render () {
+    render() {
         return (
-            <p>Your age is {this.props.age}</p>
+            <div>
+                <p>Your age is {this.props.age >= 18 && (this.props.age)}</p>
+            </div>
         )
     }
 }
