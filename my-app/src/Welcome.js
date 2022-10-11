@@ -6,11 +6,9 @@ export class Welcome extends React.Component {
         return (
             <div>
                 <p>Welcome, {this.props.name}!</p>
-                <Age age= {this.props.age} />
+                {!!this.props.age && <Age age= {this.props.age}/>}
             </div>
         )
     }
 }
 
-//Modify the Welcome component so that the Age component is rendered only if 
-//the age prop is greater than 18.
