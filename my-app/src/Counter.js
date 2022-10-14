@@ -1,5 +1,4 @@
-import React from "react";
-import { ClickCounter } from "./ClickCounter";
+import React from "react"
 import { CounterDisplay } from "./CounterDisplay"
 
 
@@ -25,7 +24,6 @@ export class Counter extends React.Component {
         return (
             <>
                 <CounterDisplay displCount={this.state.count} />
-                <ClickCounter />
             </>
         )
     }
