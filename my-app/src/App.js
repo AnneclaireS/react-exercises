@@ -5,6 +5,7 @@ import { Counter } from './Counter'
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from './ClickTracker'
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
 
 
 export class App extends React.Component {
@@ -23,6 +24,9 @@ export class App extends React.Component {
                 <ClickTracker />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <InteractiveWelcome />
+                <div style={{borderBottom: '2px solid grey'}}></div>
+                <Login />
+                <div style={{borderBottom: '2px solid grey'}}></div>
             </div>
         )
     }
