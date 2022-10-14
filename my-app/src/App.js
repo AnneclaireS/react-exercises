@@ -4,6 +4,7 @@ import { Welcome } from "./Welcome"
 import { Counter } from './Counter'
 import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from './ClickTracker'
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 
 export class App extends React.Component {
@@ -13,13 +14,15 @@ export class App extends React.Component {
                 <div style={{borderBottom: '2px solid grey'}}></div>
                 <Hello />
                 <div style={{borderBottom: '2px solid grey'}}></div>
-                <Welcome name='John' age={24} />
+                <Welcome name='John' age={20} />
                 <div style={{borderBottom: '2px solid grey'}}></div>
                 <Counter initialValue={0} incrementAmount={1} incrementInterval={1000} />
                 <div style={{borderBottom: '2px solid grey'}}></div>
                 <ClickCounter /><br/>
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <ClickTracker />
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <InteractiveWelcome />
             </div>
         )
     }
