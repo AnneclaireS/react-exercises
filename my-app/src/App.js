@@ -6,6 +6,7 @@ import { ClickCounter } from "./ClickCounter";
 import { ClickTracker } from './ClickTracker'
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 
 export class App extends React.Component {
@@ -27,6 +28,7 @@ export class App extends React.Component {
                 <div style={{borderBottom: '2px solid grey'}}></div>
                 <Login />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <UncontrolledLogin />
             </div>
         )
     }
