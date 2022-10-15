@@ -4,7 +4,8 @@ export class Login extends React.Component {
     state = {
         username: '',
         password: '',
-        remember: false
+        remember: false,
+        disabled: true
     }
 
     handleLogin = (event) => {
@@ -13,14 +14,19 @@ export class Login extends React.Component {
         const name = event.target.name
         const type = event.target.type
         const checked = event.target.checked
-
+        
         this.setState({
             [name]: type === 'checkbox' ? checked : value,
         }) 
     }
 
-    componentDidUpdate() {
-        console.log(this.state)
+    onLogin = (event) => {
+        console.log(event)
+        const click = event.target.disabled
+        this.setState({
+            disabled : click
+        })
+        console.log(click)
     }
 
     render() {
@@ -33,6 +39,8 @@ export class Login extends React.Component {
                 <label style={{color:'blue'}}><h3>Tick if completed &gt;
                 <input name='remember' type='checkbox' checked={this.state.remember} onChange={this.handleLogin}></input>
                 </h3></label>
+                <button style={{color:'blue', fontSize:14, fontWeight:'bold'}} type="submit" disabled={!this.state.username || !this.state.password} onClick={this.onLogin}>Login</button>
+                <br/><br/>
             </div>
         )
     }

@@ -26,7 +26,7 @@ export class App extends React.Component {
                 <InteractiveWelcome />
                 <div style={{borderBottom: '2px solid grey'}}></div>
                 <Login />
-                <div style={{borderBottom: '2px solid grey'}}></div>
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
             </div>
         )
     }
