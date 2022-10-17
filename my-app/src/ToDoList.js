@@ -28,15 +28,24 @@ export class ToDoList extends React.Component {
                 element:''
             }
         })
-
-        
     }
+
+    handleReset = () => {
+        
+        this.setState({
+            items: [],
+            element: ''
+        }) 
+    }
+
+
     render() {
         return (
             <div>
                 <h3>Add element:</h3>
                 <input value={this.state.element} onChange={this.handleEnterElement}></input><br/><br/>
                 <button onClick={this.handleAddElement}>Click to add</button>
+                <button onClick={this.handleReset}>Click to reset</button>
                 <ul>
                     {this.state.items.map((item) => (<li>{item}</li>))}
                 </ul>
