@@ -13,6 +13,7 @@ export class ToDoList extends React.Component {
 
         this.setState(() => {
             return {element : value}
+            
         })
     }
 
@@ -23,7 +24,8 @@ export class ToDoList extends React.Component {
 
         this.setState(() => {
             return {
-                items : [...this.state.items, newValue]
+                items : [...this.state.items, newValue],
+                element:''
             }
         })
 
@@ -33,7 +35,7 @@ export class ToDoList extends React.Component {
         return (
             <div>
                 <h3>Add element:</h3>
-                <input onChange={this.handleEnterElement}></input><br/><br/>
+                <input value={this.state.element} onChange={this.handleEnterElement}></input><br/><br/>
                 <button onClick={this.handleAddElement}>Click to add</button>
                 <ul>
                     {this.state.items.map((item) => (<li>{item}</li>))}
