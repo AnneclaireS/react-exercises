@@ -10,11 +10,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
 
 const items = [
-    {id:1, title: 'Green'},
-    {id:1, title: 'Green'},
-    {id:1, title: 'Green'},
-    {id:1, title: 'Green'},
-    {id:1, title: 'Green'}
+    
 ]
 
 
