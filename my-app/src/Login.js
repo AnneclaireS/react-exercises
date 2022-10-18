@@ -38,6 +38,9 @@ export class Login extends React.Component {
     }
 
     render() {
+        const MyStyle = {
+            backgroundColor: this.state.password.length < 8 ? 'red' : 'green'
+        }
         return (
             <div>
                 <h3 style={{color:'blue'}}>Insert your username:</h3>
@@ -47,7 +50,7 @@ export class Login extends React.Component {
                 <label style={{color:'blue'}}><h3>Tick if completed &gt;
                 <input name='remember' type='checkbox' checked={this.state.remember} onChange={this.handleLogin}></input>
                 </h3></label>
-                <button style={{color:'blue', fontSize:14, fontWeight:'bold'}} type="submit" disabled={!this.state.username || !this.state.password} onClick={this.onLogin}>Login</button>
+                <button style={MyStyle} type="submit" disabled={!this.state.username || !this.state.password} onClick={this.onLogin}>Login</button>
                 <button style={{color:'blue', fontSize:14, fontWeight:'bold'}} onClick={this.handleResetState}>Press to reset</button>
                 <br/><br/>
             </div>
