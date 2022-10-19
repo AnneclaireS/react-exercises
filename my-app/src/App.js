@@ -11,10 +11,6 @@ import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
 
 
-const items = [
-    
-
-]
 
 
 export class App extends React.Component {
@@ -37,10 +33,20 @@ export class App extends React.Component {
                 <div style={{ borderBottom: '2px solid grey' }}></div><br />
                 <UncontrolledLogin />
                 <div style={{ borderBottom: '2px solid grey' }}></div><br />
-                <ToDoList items={items} />
+                <ToDoList render={(items, handleRemoveElement) => {
+                    return (
+                        items.map((todos, index) => (
+                            <div key={index}>
+                                <li>{todos}</li>
+                                <button key={index} onClick={() => { handleRemoveElement(todos) }}>Remove Element</button>
+                            </div>
+                        ))
+                    )
+                }
+                } />
                 <div style={{ borderBottom: '2px solid grey' }}></div><br />
             </Container>
-  
+
         )
     }
 
