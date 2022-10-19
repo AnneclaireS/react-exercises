@@ -9,14 +9,19 @@ import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
+import { LanguageComponent } from "./LanguageContext";
+
 
 
 
 
 export class App extends React.Component {
+   
     render() {
         return (
-            <Container className="container" title='My Awesome Application'>
+                <><LanguageComponent />
+                <hr/>
+                <Container className="container" title='My Awesome Application'>
                 <Hello />
                 <div style={{ borderBottom: '2px solid grey' }}></div>
                 <Welcome name='John' age={20} />
@@ -38,15 +43,14 @@ export class App extends React.Component {
                         items.map((todos, index) => (
                             <div key={index}>
                                 <li>{todos}</li>
-                                <button key={index} onClick={() => { handleRemoveElement(todos) }}>Remove Element</button>
+                                <button key={index} onClick={() => { handleRemoveElement(todos); } }>Remove Element</button>
                             </div>
                         ))
-                    )
-                }
-                } />
-                <div style={{ borderBottom: '2px solid grey' }}></div><br />
-            </Container>
+                    );
+                } } />
+                <div style={{ borderBottom: '2px solid grey' }}></div>
 
+            </Container></>
         )
     }
 
