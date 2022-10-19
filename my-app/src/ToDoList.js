@@ -52,12 +52,7 @@ export class ToDoList extends React.Component {
                 <button onClick={this.handleAddElement}>Click to add</button>
                 <button onClick={this.handleReset}>Click to reset</button>
                 <ul>
-                    {this.state.items.map((item, index) => (
-                    <li key={index}>
-                    {item}
-                    <button key={index} onClick={this.handleRemoveElement.bind(this, index)}>Remove element</button>
-                    </li>  
-                    ))}
+                {this.props.render(this.state.items, this.handleRemoveElement)}
                 </ul>
               
 
@@ -66,4 +61,5 @@ export class ToDoList extends React.Component {
         )
 
     }
-}
+} 
+
