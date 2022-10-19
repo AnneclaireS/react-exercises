@@ -8,11 +8,11 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
+import { Sum } from './Sum';
 
 const items = [
     
 ]
-
 
 export class App extends React.Component {
     render() {
@@ -37,6 +37,7 @@ export class App extends React.Component {
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <ToDoList items={items} />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <Sum numbers={[1,7,9,6]}/>
                 
             </div>
         )
