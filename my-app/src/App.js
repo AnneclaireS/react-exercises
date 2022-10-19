@@ -20,7 +20,7 @@ const items = [
 export class App extends React.Component {
     render() {
         return (
-            <Container className="container">
+            <Container className="container" title='My Awesome Application'>
                 <Hello />
                 <div style={{ borderBottom: '2px solid grey' }}></div>
                 <Welcome name='John' age={20} />
