@@ -9,6 +9,7 @@ import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
 import { Sum } from './Sum';
+import { GitHubUser } from "./GitHubUser";
 
 const items = [
 
@@ -39,7 +40,8 @@ export class App extends React.Component {
                 <ToDoList items={items} />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <Sum />
-                
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <GitHubUser username="AnneclaireS"/>
             </div>
         )
     }
