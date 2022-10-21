@@ -11,21 +11,22 @@ import { ToDoList } from "./ToDoList";
 import { Sum } from './Sum';
 
 const items = [
-    
+
 ]
 
 export class App extends React.Component {
     render() {
         return (
             <div>
-                <div style={{borderBottom: '2px solid grey'}}></div>
+                <div style={{ borderBottom: '2px solid grey' }}></div>
                 <Hello />
-                <div style={{borderBottom: '2px solid grey'}}></div>
+                <div style={{ borderBottom: '2px solid grey' }}></div>
                 <Welcome name='John' age={20} />
-                <div style={{borderBottom: '2px solid grey'}}></div>
+                <div style={{ borderBottom: '2px solid grey' }}></div>
                 <Counter initialValue={0} incrementAmount={1} incrementInterval={1000} />
-                <div style={{borderBottom: '2px solid grey'}}></div>
-                <ClickCounter /><br/>
+                <div style={{ borderBottom: '2px solid grey' }}></div>
+                <ClickCounter onCounterChange={(count) => {
+                    return console.log("The counter is now", + count)}} /><br/>
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <ClickTracker />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
