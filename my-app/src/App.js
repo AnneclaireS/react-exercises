@@ -23,7 +23,7 @@ export class App extends React.Component {
                 <div style={{ borderBottom: '2px solid grey' }}></div>
                 <Welcome name='John' age={20} />
                 <div style={{ borderBottom: '2px solid grey' }}></div>
-                <Counter initialValue={0} incrementAmount={1} incrementInterval={1000} />
+                <Counter  />
                 <div style={{ borderBottom: '2px solid grey' }}></div>
                 <ClickCounter onCounterChange={(count) => {
                     return console.log("The counter is now", + count)}} /><br/>
