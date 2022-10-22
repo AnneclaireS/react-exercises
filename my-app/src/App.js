@@ -10,6 +10,7 @@ import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
 import { Sum } from './Sum';
 import { GitHubUser } from "./GitHubUser";
+import { GitHubUserList } from "./GitHubUserList";
 
 const items = [
 
@@ -42,6 +43,7 @@ export class App extends React.Component {
                 <Sum />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <GitHubUser username="AnneclaireS"/>
+                <GitHubUserList  />
             </div>
         )
     }
