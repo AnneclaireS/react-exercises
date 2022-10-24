@@ -33,6 +33,7 @@ export function LoginForm() {
 
     return (
         <div>
+            <h1>Compile Form: </h1>
             <input name='username' value={username} onChange={onLogin}></input>
             <input name='password' type='password' value={password} onChange={onLogin}></input>
         </div>
