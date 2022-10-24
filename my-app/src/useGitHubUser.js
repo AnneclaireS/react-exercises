@@ -5,10 +5,12 @@ export function useGitHubUser() {
 
     const [data, setData] = useState(null)
     const [error, setError] = useState(null)
+    const [loading, setLoading] = useState(false)
 
 
     async function fetchGitHubUser(username) {
         setError(null)
+        setLoading(true)
 
         try {
             const response = await fetch(`https://api.github.com/users/${username}`)
@@ -19,7 +21,7 @@ export function useGitHubUser() {
             setError(error)
             setData(null)
         } finally {
-
+            setLoading(false)
         }
     }
 
@@ -27,6 +29,7 @@ export function useGitHubUser() {
 
     return {
         data,
+        loading,
         error,
         onFetchUser: fetchGitHubUser
     }
