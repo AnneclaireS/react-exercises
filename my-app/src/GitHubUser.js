@@ -1,26 +1,19 @@
-import {useEffect, useState} from "react"
+import { useGitHubUser } from './useGitHubUser'
+import { useEffect } from 'react'
 
-export function GitHubUser({username}) {
+export function GitHubUser({ username }) {
 
-    const [data, setData] = useState(null)
+    const {data, error, onFetchUser} = useGitHubUser(username)
 
     useEffect(() => {
-    fetch(`https://api.github.com/users/${username}`)
-        .then((response) => {
-            return response.json()
-        })
-        .then((json) => {
-            console.log(json)
-
-            setData(json)
-        })
+        onFetchUser(username)
     }, [username])
 
+
     return <div>
+        {error && <h1>An error occurred while processing your request</h1>}
         {data && <h1>User's name: {data.name}</h1>}
-        {data && <h1>On GitHub: {data.login}</h1>}
-        {data && <h1>Followers: {data.followers}</h1>}
 
     </div>
-    
+
 } 

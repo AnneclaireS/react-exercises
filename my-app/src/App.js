@@ -43,10 +43,12 @@ export class App extends React.Component {
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <Sum />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
-                <GitHubUser username="AnneclaireS"/>
-                <GitHubUserList  />
+                <GitHubUser username={'gianmarcotoso'}/>
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
-                <LoginForm />
+                <GitHubUserList />
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <LoginForm /><br/>
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
             </div>
         )
     }
