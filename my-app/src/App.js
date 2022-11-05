@@ -13,6 +13,8 @@ import { GitHubUser } from "./GitHubUser";
 import { GitHubUserList } from "./GitHubUserList";
 import { LoginForm} from "./ControlledForm";
 import { CarDetails } from "./CarDetails";
+import { DisplayLanguage } from "./DisplayLanguage";
+
 
 const items = [
 
@@ -50,7 +52,10 @@ export class App extends React.Component {
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <LoginForm /><br/>
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
-                <CarDetails initialData={{model: 'lamborghini', year: '1998', color: 'red'}}/>
+                <CarDetails initialData={{model: 'lamborghini', year: '1998', color: 'red'}}/><br/>
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <DisplayLanguage />
+                
             </div>
         )
     }
