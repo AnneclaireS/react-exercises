@@ -1,13 +1,25 @@
-import { useGitHubUser } from './useGitHubUser'
-import { useEffect } from 'react'
+import useSWR from 'swr'
+
+
+
+const fetcher = (url) => fetch(url).then((response) => response.json())
+
+function useGitHubUser(username){
+
+    const {data, error} = useSWR(`https://api.github.com/users/${username}`, fetcher)
+    
+    return{
+        data,
+        loading: !data && !error,
+        error,
+    }
+}
 
 export function GitHubUser({ username }) {
 
-    const {data, error, loading, onFetchUser} = useGitHubUser(username)
+    const {data, error, loading} = useGitHubUser(username)
 
-    useEffect(() => {
-        onFetchUser(username)
-    }, [username])
+
 
 
     return <div>
