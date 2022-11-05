@@ -14,6 +14,7 @@ import { GitHubUserList } from "./GitHubUserList";
 import { LoginForm} from "./ControlledForm";
 import { CarDetails } from "./CarDetails";
 import { DisplayLanguage } from "./DisplayLanguage";
+import FilteredList from "./FilteredList";
 
 
 const items = [
@@ -55,7 +56,8 @@ export class App extends React.Component {
                 <CarDetails initialData={{model: 'lamborghini', year: '1998', color: 'red'}}/><br/>
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <DisplayLanguage />
-                
+                <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <FilteredList />
             </div>
         )
     }
