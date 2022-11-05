@@ -8,6 +8,8 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { ToDoList } from "./ToDoList";
+import { GitHubUser } from "./GitHubUser";
+
 
 const items = [
     
@@ -37,6 +39,7 @@ export class App extends React.Component {
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
                 <ToDoList items={items} />
                 <div style={{borderBottom: '2px solid grey'}}></div><br/>
+                <GitHubUser username={'AnneclaireS'}/>
                 
             </div>
         )
